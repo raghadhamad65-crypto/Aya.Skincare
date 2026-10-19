@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Aya.Skincare</title>
+
+
+    <!-- =====================================================
+         ربط ملف CSS
+         هذا الملف مسؤول عن التصميم والألوان والشكل
+         ===================================================== -->
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+         هذا هو الشريط العلوي للموقع.
+
+         يحتوي على:
+         - اللوجو
+         - روابط المنتجات والباكجات
+         - زر السلة
+
+         سنجعل تصميمه Responsive من البداية.
+         ===================================================== -->
+
+    <header class="header">
+
+        <div class="header__container">
+
+
+            <!-- =================================================
+                 LOGO
+                 أنتِ ستضعين اللوجو بنفسك.
+
+                 ضعي الصورة لاحقًا داخل:
+                 images/logo.png
+                 ================================================= -->
+
+            <a href="#home" class="logo">
+
+                <img
+                    src="images/logo.png"
+                    alt="Aya.Skincare"
+                >
+
+            </a>
+
+
+            <!-- =================================================
+                 NAVIGATION
+                 روابط الأقسام الأساسية فقط.
+                 ================================================= -->
+
+            <nav class="navbar">
+
+                <a href="#home">الرئيسية</a>
+
+                <a href="#products">المنتجات</a>
+
+                <a href="#packages">الباكجات</a>
+
+            </nav>
+
+
+            <!-- =================================================
+                 CART BUTTON
+                 زر السلة.
+
+                 الرقم الموجود داخله سيتم تحديثه لاحقًا
+                 باستخدام JavaScript.
+                 ================================================= -->
+
+            <button
+                class="cart-button"
+                type="button"
+                aria-label="فتح السلة"
+            >
+
+                🛒
+
+                <span class="cart-count">0</span>
+
+            </button>
+
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+      
+        <section class="hero" id="home">
+
+
+            <div class="hero__container">
+
+
+                <!-- ================================
+                     HERO TEXT
+                     النص الموجود في الواجهة الرئيسية.
+                     ================================= -->
+
+                <div class="hero__content">
+
+                    <span class="hero__brand">
+                        Aya.Skincare
+                    </span>
+
+
+                    <h1>
+                        عنايتكِ تبدأ من هنا
+                    </h1>
+
+
+                    <p>
+                        اكتشفي اختيارات Aya.Skincare
+                        للعناية والجمال.
+                    </p>
+
+
+                    <a
+                        href="#products"
+                        class="hero__button"
+                    >
+                        تسوّقي الآن
+                    </a>
+
+                </div>
+
+<!-- =========================================================
+     🌸 Hero Logo Visual
+     هذا الجزء يجعل اللوجو هو العنصر الرئيسي في الـHero.
+     أضفنا حوله بتلات + Glow + لمعات تتحرك بشكل ناعم.
+     ========================================================= -->
+
+<div class="hero__image hero-logo">
+
+  <!-- Glow خلف اللوجو -->
+  <span class="hero-glow hero-glow--1"></span>
+  <span class="hero-glow hero-glow--2"></span>
+
+  <!-- بتلات وزهور حول اللوجو -->
+  <span class="hero-flower hero-flower--1">✿</span>
+  <span class="hero-flower hero-flower--2">✿</span>
+  <span class="hero-flower hero-flower--3">✿</span>
+
+  <!-- لمعات صغيرة -->
+  <span class="hero-spark hero-spark--1">✦</span>
+  <span class="hero-spark hero-spark--2">✧</span>
+  <span class="hero-spark hero-spark--3">✦</span>
+  <span class="hero-spark hero-spark--4">✧</span>
+
+  <!-- اللوجو نفسه -->
+  <div class="hero-logo__main">
+    <img src="images/logo.png" alt="Aya Skincare">
+  </div>
+
+</div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             PRODUCTS
+             هذا القسم خاص بالمنتجات الفردية فقط.
+
+             JavaScript لاحقًا سيقوم بإنشاء المنتجات
+             تلقائيًا من مصفوفة PRODUCTS.
+             ===================================================== -->
+
+        <section
+            class="products"
+            id="products"
+        >
+
+            <div class="section__container">
+
+
+                <div class="section__heading">
+
+                    <span>
+                        Aya Collection
+                    </span>
+
+                    <h2>
+                        منتجاتنا
+                    </h2>
+
+                </div>
+
+
+                <!-- هنا سيتم إنشاء المنتجات بواسطة JavaScript -->
+
+                <div
+                    class="products__grid"
+                    id="productsGrid"
+                ></div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             PACKAGES
+             هذا القسم خاص بالباكجات فقط.
+
+             سيتم التحكم بالباكجات من JavaScript
+             بنفس طريقة المنتجات.
+             ===================================================== -->
+
+        <section
+            class="packages"
+            id="packages"
+        >
+
+            <div class="section__container">
+
+
+                <div class="section__heading">
+
+                    <span>
+                        Special Sets
+                    </span>
+
+                    <h2>
+                        الباكجات
+                    </h2>
+
+                </div>
+
+
+                <!-- هنا سيتم إنشاء الباكجات بواسطة JavaScript -->
+
+                <div
+                    class="packages__grid"
+                    id="packagesGrid"
+                ></div>
+
+
+            </div>
+
+        </section>
+
+
+
+    </main>
+
+
+
+    <!-- =========================================================
+         CART DRAWER
+         السلة الجانبية.
+
+         سنكمل محتواها ووظائفها في JavaScript.
+
+         حاليًا نجهز الهيكل فقط.
+         ========================================================= -->
+
+    <aside
+        class="cart-drawer"
+        id="cartDrawer"
+        aria-hidden="true"
+    >
+
+        <div class="cart-drawer__header">
+
+            <h2>
+                سلة التسوق
+            </h2>
+
+            <button
+                class="cart-close"
+                type="button"
+                aria-label="إغلاق السلة"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <!-- المنتجات الموجودة داخل السلة -->
+
+        <div
+            class="cart-items"
+            id="cartItems"
+        ></div>
+
+
+        <!-- إجمالي السلة -->
+
+        <div class="cart-total">
+
+            <span>
+                الإجمالي
+            </span>
+
+            <strong>
+                <span id="cartTotal">0</span>
+                ₪
+            </strong>
+
+        </div>
+
+
+        <!-- زر إتمام الطلب -->
+
+        <button
+            class="checkout-button"
+            type="button"
+        >
+            إتمام الطلب
+        </button>
+
+    </aside>
+<!-- =========================================================
+     🧾 قسم Checkout
+     هذا القسم يظهر عندما تضغط العميلة على "إتمام الطلب".
+     
+     يحتوي على:
+     - الاسم
+     - رقم الهاتف
+     - المدينة
+     - العنوان
+     - ملاحظات
+     
+     حاليًا هو HTML فقط.
+     لاحقًا سنضيف له CSS ثم نربطه بالـ WhatsApp.
+     ========================================================= -->
+
+<div class="checkout-modal" id="checkoutModal">
+
+  <!-- الخلفية الداخلية للنافذة -->
+  <div class="checkout-modal__content">
+
+    <!-- رأس نموذج الطلب -->
+    <div class="checkout-modal__header">
+
+      <div>
+        <span class="checkout-modal__eyebrow">
+          Aya.Skincare
+        </span>
+
+        <h2>إتمام الطلب</h2>
+
+        <p>
+          أدخلي بياناتك لإتمام طلبك بسهولة 🤍
+        </p>
+      </div>
+
+      <!-- زر إغلاق النموذج -->
+      <button
+        type="button"
+        class="checkout-modal__close"
+        id="checkoutClose"
+        aria-label="إغلاق"
+      >
+        ×
+      </button>
+
+    </div>
+
+
+    <!-- نموذج بيانات العميلة -->
+    <form id="checkoutForm" class="checkout-form">
+
+      <!-- الاسم -->
+      <div class="checkout-field">
+
+        <label for="customerName">
+          الاسم الكامل
+        </label>
+
+        <input
+          type="text"
+          id="customerName"
+          name="customerName"
+          placeholder="اكتبي اسمك الكامل"
+          required
+        >
+
+      </div>
+
+
+      <!-- رقم الهاتف -->
+      <div class="checkout-field">
+
+        <label for="customerPhone">
+          رقم الهاتف
+        </label>
+
+        <input
+          type="tel"
+          id="customerPhone"
+          name="customerPhone"
+          placeholder="05XXXXXXXX"
+          required
+        >
+
+      </div>
+
+
+      <!-- المدينة -->
+      <div class="checkout-field">
+
+        <label for="customerCity">
+          المدينة
+        </label>
+
+        <input
+          type="text"
+          id="customerCity"
+          name="customerCity"
+          placeholder="مثال: غزة"
+          required
+        >
+
+      </div>
+
+
+      <!-- العنوان -->
+      <div class="checkout-field">
+
+        <label for="customerAddress">
+          العنوان بالتفصيل
+        </label>
+
+        <input
+          type="text"
+          id="customerAddress"
+          name="customerAddress"
+          placeholder="المنطقة، الشارع، أقرب نقطة دالة"
+          required
+        >
+
+      </div>
+
+
+      <!-- الملاحظات -->
+      <div class="checkout-field">
+
+        <label for="customerNotes">
+          ملاحظات إضافية
+          <span>(اختياري)</span>
+        </label>
+
+        <textarea
+          id="customerNotes"
+          name="customerNotes"
+          rows="3"
+          placeholder="أي ملاحظات خاصة بالطلب..."
+        ></textarea>
+
+      </div>
+
+
+      <!-- ملخص الطلب -->
+      <div class="checkout-summary">
+
+        <div class="checkout-summary__row">
+
+          <span>
+            إجمالي الطلب
+          </span>
+
+          <strong id="checkoutTotal">
+            0 ₪
+          </strong>
+
+        </div>
+
+      </div>
+
+
+      <!-- زر إرسال الطلب -->
+      <button
+        type="submit"
+        class="checkout-submit"
+      >
+        إرسال الطلب عبر WhatsApp
+      </button>
+
+    </form>
+
+  </div>
+
+</div>
+
+
+    <!-- =========================================================
+         OVERLAY
+         طبقة تظهر خلف السلة عند فتحها.
+
+         تجعل التركيز على السلة وتسمح بإغلاقها عند الضغط عليها.
+         ========================================================= -->
+
+    <div
+        class="cart-overlay"
+        id="cartOverlay"
+    ></div>
+
+
+
+    <!-- =========================================================
+         FOOTER
+         نهاية الموقع.
+
+         سنضع فيه لاحقًا:
+         - اسم البراند
+         - Instagram
+         - معلومات التواصل
+         ========================================================= -->
+
+    <footer class="footer">
+
+        <p>
+            © 2026 Aya.Skincare
+        </p>
+
+    </footer>
+
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+         هذا الملف سيجعل المتجر تفاعليًا.
+
+         لاحقًا سيكون مسؤولًا عن:
+         - المنتجات
+         - الباكجات
+         - السلة
+         - الكميات
+         - الإجمالي
+         - الطلب
+         ========================================================= -->
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
